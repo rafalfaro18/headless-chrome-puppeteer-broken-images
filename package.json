@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/rafalfaro18/headless-chrome-puppeteer-broken-images#readme",
   "dependencies": {
+    "dotenv": "^6.1.0",
     "puppeteer": "^1.9.0"
   }
 }
