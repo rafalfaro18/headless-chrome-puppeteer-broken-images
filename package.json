@@ -1,0 +1,30 @@
+{
+  "name": "headless-chrome-puppeteer-broken-images",
+  "version": "1.0.0",
+  "description": "Get Broken images and screenshot of page with broken images from a list of page urls",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafalfaro18/headless-chrome-puppeteer-broken-images.git"
+  },
+  "keywords": [
+    "broken-image",
+    "broken-links",
+    "puppeteer",
+    "headless-chrome",
+    "nodejs",
+    "node",
+    "node-js",
+    "example"
+  ],
+  "author": "Rafael Alfaro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rafalfaro18/headless-chrome-puppeteer-broken-images/issues"
+  },
+  "homepage": "https://github.com/rafalfaro18/headless-chrome-puppeteer-broken-images#readme"
+}
