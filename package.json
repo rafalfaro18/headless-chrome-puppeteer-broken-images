@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/rafalfaro18/headless-chrome-puppeteer-broken-images/issues"
   },
-  "homepage": "https://github.com/rafalfaro18/headless-chrome-puppeteer-broken-images#readme"
+  "homepage": "https://github.com/rafalfaro18/headless-chrome-puppeteer-broken-images#readme",
+  "dependencies": {
+    "puppeteer": "^1.9.0"
+  }
 }
