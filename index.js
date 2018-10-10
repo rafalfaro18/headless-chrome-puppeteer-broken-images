@@ -19,8 +19,8 @@ async function getImages(url , index=0){
     }
 
     await page.goto(url, {waitUntil: 'networkidle2'});
-    const images_links = await page.$$eval('img', image => image.filter(image => image.naturalWidth == 0 || image.readyState == 'uninitialized').map(img => img.src));
-    if (images_links) {
+    let images_links = await page.$$eval('img', image => image.filter(image => image.naturalWidth == 0 || image.readyState == 'uninitialized').map(img => img.src));
+    if (images_links.length >= 1) {
       await page.screenshot({path: `page-${index}.png`, fullPage: true });
       images_links.forEach((image) => {
         console.log(image);
