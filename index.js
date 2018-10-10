@@ -7,8 +7,10 @@ const puppeteer = require('puppeteer');
   try {
   await page.authenticate({username:process.env.HT_USER, password:process.env.HT_PASS});
   await page.goto(process.env.SITE_URL, {waitUntil: 'networkidle2'});
-  const images_length = await page.$$eval('img', images => images.length);
-  console.log(images_length);
+  const images_links = await page.$$eval('img', image => image.map(img => img.src));
+  images_links.forEach((image) => {
+    console.log(image)
+  });
   await page.screenshot({path: 'page.png', fullPage: true });
   await browser.close();
   }
