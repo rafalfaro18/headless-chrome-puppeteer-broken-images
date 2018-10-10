@@ -7,10 +7,12 @@ const puppeteer = require('puppeteer');
   try {
   await page.authenticate({username:process.env.HT_USER, password:process.env.HT_PASS});
   await page.goto(process.env.SITE_URL, {waitUntil: 'networkidle2'});
-  const images_links = await page.$$eval('img', image => image.map(img => img.src));
-  images_links.forEach((image) => {
-    console.log(image)
-  });
+  const images_links = await page.$$eval('img', image => image.filter(image => image.naturalWidth == 0 || image.readyState == 'uninitialized').map(img => img.src));
+  if (images_links) {
+    images_links.forEach((image) => {
+      console.log(image)
+    });
+  }
   await page.screenshot({path: 'page.png', fullPage: true });
   await browser.close();
   }
