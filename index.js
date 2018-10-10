@@ -21,6 +21,7 @@ async function getImages(url , index=0){
     await page.goto(url, {waitUntil: 'networkidle2'});
     const images_links = await page.$$eval('img', image => image.filter(image => image.naturalWidth == 0 || image.readyState == 'uninitialized').map(img => img.src));
     if (images_links) {
+      await page.screenshot({path: `page-${index}.png`, fullPage: true });
       images_links.forEach((image) => {
         console.log(image);
         fs.appendFile('broken_images.txt', image+'\n', function (err) {
@@ -29,7 +30,6 @@ async function getImages(url , index=0){
         });
       });
     }
-    await page.screenshot({path: `page-${index}.png`, fullPage: true });
     await browser.close();
   }
   catch (e){
