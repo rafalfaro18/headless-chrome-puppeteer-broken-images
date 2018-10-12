@@ -32,6 +32,7 @@ Get Broken images and screenshot of page with broken images from a list of page 
 
 - .txt files are overwritten on each run.
 - .png files are NOT overwritten pn each run. (For a clean run remove all png files)
+- You can make sure to use the same NODE version with nvm. (Install nvm and run: nvm use)
 
 ### To Do
 * Code Refactoring
