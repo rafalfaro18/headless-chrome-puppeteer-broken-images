@@ -1,5 +1,5 @@
 # headless-chrome-puppeteer-broken-images
-Get Broken images and screenshot of page with broken images from a list of page urls
+Get Broken images and screenshot of page with broken images from a list of page urls. You can still use chrome wile this runs because it uses a headless version of chromium, so you don't need to worry about blocking chrome usage while it runs.
 
 ## Instructions
 
@@ -9,7 +9,7 @@ Get Broken images and screenshot of page with broken images from a list of page 
 4. (HT_USER and HT_PASS are optional, use only if your site is password protected).
 5. npm start
 
-## Instructions (Broken Links)
+## Instructions (Broken Links - Check if some links also exist in another domain. For example after migrating wordpress posts to another wordpress site)
 1. npm install.
 2. create an .env file with content like [this](env.example)
 3. SAME_SITE_LINKS is a comma separated list of urls from the original domain (without the domain or starting slash)
@@ -22,7 +22,8 @@ Get Broken images and screenshot of page with broken images from a list of page 
 2. create an .env file with content like [this](env.example)
 3. SAME_SITE_LINKS is a comma separated list of urls to test
 4. (HT_USER and HT_PASS are optional, use only if your site is password protected).
-5. npm run featured-image
+5. It looks for an img tag inside an element with a class 'grop-post_image'. You might want to change this.
+6. npm run featured-image
 
 ### To Do
 * Code Refactoring
