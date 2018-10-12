@@ -37,4 +37,4 @@ Get Broken images and screenshot of page with broken images from a list of page 
 ### To Do
 * Code Refactoring
 * Better Instructions
-* More options to make the tool less specific
+* More options to make the tool less specific. (Example: Featured Image selector should be an option)
