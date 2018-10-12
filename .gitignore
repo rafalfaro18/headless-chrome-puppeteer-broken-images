@@ -63,4 +63,4 @@ typings/
 #pdf files
 *.pdf
 *.png
-broken_images.txt
+*.txt
