@@ -35,3 +35,5 @@ Get Broken images and screenshot of page with broken images from a list of page 
 
 ### To Do
 * Code Refactoring
+* Better Instructions
+* More options to make the tool less specific
