@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "featured-image": "node featured-images.js"
+    "featured-image": "node featured-images.js",
+    "broken-links": "node broken-links.js"
   },
   "repository": {
     "type": "git",
