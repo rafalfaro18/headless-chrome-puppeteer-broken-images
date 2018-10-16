@@ -35,6 +35,7 @@ Get Broken images and screenshot of page with broken images from a list of page 
 - You can make sure to use the same NODE version with nvm. (Install nvm and run: nvm use)
 
 ### To Do
+* Improve performance
 * Code Refactoring
 * Better Instructions
 * More options to make the tool less specific. (Example: Featured Image selector should be an option)
