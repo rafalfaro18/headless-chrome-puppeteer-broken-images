@@ -23,6 +23,7 @@ async function getImages(url , index=0, browser){
       waitUntil: 'networkidle2',
       timeout: 0
     });
+    console.log(`checking ${new_url}`);
     let images_links = await page.$$eval('body.error404', image => image);
     if (images_links.length > 0) {
       // await page.screenshot({path: `page-${index}.png`, fullPage: true });
