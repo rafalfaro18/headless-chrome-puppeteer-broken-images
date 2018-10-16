@@ -8,10 +8,9 @@ async function asyncForEach(array, callback) {
   }
 }
 
-async function getImages(url , index=0){
+async function getImages(url , index=0, browser){
   let username = process.env.HT_USER;
   let password = process.env.HT_PASS;
-  let browser = await puppeteer.launch();
   let page = await browser.newPage();
   // let old_url = process.env.OLD_DOMAIN.replace(/\/$/, '') + '/' +url;
   let new_url = process.env.NEW_DOMAIN.replace(/\/$/, '') + '/' +url;
@@ -34,7 +33,7 @@ async function getImages(url , index=0){
         console.log('Saved!');
       });
     }
-    await browser.close();
+    // await browser.close();
   }
   catch (e){
     console.error(e);
@@ -52,7 +51,9 @@ async function getImages(url , index=0){
 
   await asyncForEach(same_site_links, async (link, index) => {
     try {
-      await getImages(link, index);
+      let browser = await puppeteer.launch();
+      await getImages(link, index, browser);
+      await browser.close();
     }
     catch (e){
       console.error(e);
